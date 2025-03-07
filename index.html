@@ -45,7 +45,53 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body
+    <h2> Atsauksme! </h2><!--  -->
+   <form>
+  <label for="patīk">Vai tev patīk šī mājaslapa?</label><br>
+  <input type="radio" id="jā" name="patīk" value="Jā">
+  <label for="html">Jā</label><br>
+  <input type="radio" id="jā" name="patīk" value="Jā">
+  <label for="html">Nē</label><br>
+  <input type="radio" id="jā" name="patīk" value="Jā">
+  <label for="html">Es nezinu</label><br><br>
+    </form>
+    <form>
+  <label for="birthday">Kurā datumā Jus skatities šo mājaslapu?</label>
+  <input type="date" id="datums" name="datums">
+</form>
+    <form>
+  <p><label for="w3review">Ieteikumi:</label></p>
+  <textarea id="w3review" name="w3review" rows="4" cols="50">...</textarea>
+  <br>
+</form>
+    
+<p>
+  <label>Informācijas daudzuma mērvienības</label>
+  <input id="inputGB" type="number" placeholder="GB" oninput="ByteConverter(this.value)" onchange="ByteConverter(this.value)">
+</p>
+<p>MB: <span id="outputmg"></span></p>
+<p>MiB: <span id="outputmib"></span></p>
+
+<script>
+function ByteConverter(valNum) {
+  // Convert GB to MB
+  document.getElementById("outputmg").innerHTML = valNum*1000;
+
+  // Convert GB to MiB
+  document.getElementById("outputmib").innerHTML = valNum*953.67431640625;
+}
+</script>
+
+<form>
+        <div>1.skaitlis<input type="text" name="sk1"> </div>
+        <div>
+            <input value="+" name="reiz" onclick="rez.value=sk1.value-sk2.value*-1" type="button">
+        </div>
+        <div>2.skaitlis<input type="text" name="sk2"> </div>
+        <hr>
+        <div>Rezultāts<input name="rez"> </div>
+    </form>
+
         
 
     </body>
