@@ -1,0 +1,150 @@
+/* Global Styles */
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+}
+
+body {
+    background-color: #f0f8ff;
+    margin: 0;
+}
+
+.w3-bar, h1 {
+    font-family: "Roboto", sans-serif;
+}
+
+.fa-anchor, .fa-coffee {
+    font-size: 200px;
+}
+
+/* Navbar Styles */
+.w3-bar {
+    background-color: #add8e6;
+}
+
+.w3-bar .w3-button {
+    color: #333;
+}
+
+.w3-button:hover, .w3-bar-item:hover {
+    background-color: #a2c7d8;
+}
+
+/* Header Styles */
+.w3-header {
+    background-color: white;
+    color: black;
+    padding: 120px 16px;
+}
+
+.w3-header h1 {
+    margin: 40px 0 0 0;
+}
+
+/* Row and Container Styles */
+.w3-row-padding {
+    padding: 104px 16px;
+}
+
+.w3-container {
+    padding: 32px;
+}
+
+/* Footer Styles */
+.w3-footer {
+    background-color: #333;
+    color: white;
+    padding: 32px;
+    text-align: center;
+    width: 100%;
+}
+
+.w3-footer a {
+    color: #add8e6;
+}
+
+.w3-footer a:hover {
+    color: white;
+}
+
+/* Image Styling */
+.w3-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Specific Image Fixes */
+.montaza-img {
+    max-width: 80%;
+    margin-bottom: 30px;
+}
+
+.petijums-img {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+/* Video Styling */
+video {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Dropdown Styling */
+.w3-dropdown-hover:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #add8e6;
+    z-index: 1;
+}
+
+.dropdown-menu a:hover {
+    background-color: #a2c7d8;
+}
+
+/* Navbar Button Styling */
+.w3-bar .w3-button, .w3-bar-item {
+    color: #333;
+    background-color: #add8e6;
+}
+
+.w3-bar .w3-button:hover, .w3-bar-item:hover {
+    background-color: #a2c7d8;
+    color: white;
+}
+/* Fix for Perfect Dropdown Alignment */
+.w3-dropdown-hover .dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 95px;
+    top: 100%; /* Position the dropdown directly below the button */
+    background-color: #add8e6;
+    z-index: 1;
+    min-width: 9.8%; /* Match the width of the parent button */
+}
+
+.w3-dropdown-hover:hover .dropdown-menu {
+    display: block;
+}
+
+.w3-dropdown-hover .dropdown-menu a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #333;
+}
+
+.w3-dropdown-hover .dropdown-menu a:hover {
+    background-color: #a2c7d8;
+    color: white;
+}
+
+

@@ -3,28 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laika plānošanas lietotnes</title>
+    <title>Atsauksme</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="mansStils.css">
-    <style>
-        body, h1, h2, h3, h4, h5, h6 {font-family: "Roboto", sans-serif; font-weight: bold;}
-        .w3-bar, h1 {font-family: "Roboto", sans-serif;}
-        .fa-anchor, .fa-coffee {font-size: 200px;}
-
-        /* Custom Styles */
-        .w3-bar { background-color: #add8e6; }
-        .w3-bar .w3-button { color: #333; }
-        .w3-button:hover { background-color: #a2c7d8; }
-        .w3-header { background-color: white; color: black; padding: 120px 16px; }
-        .w3-header h1 { margin: 40px 0 0 0; } /* Added margin-top to the h1 */
-        .w3-row-padding { padding: 104px 16px; }
-        .w3-container { padding: 32px; }
-        body { background-color: #f0f8ff; margin: 0; }
-        .w3-footer { background-color: #333; color: white; padding: 32px; text-align: center; width: 100%; }
-        video { width: 50%; height: auto; display: block; margin: 0 auto; }
-    </style>
 </head>
 <body>
 
@@ -46,33 +29,62 @@
   </div>
 </div>
 
-
 <!-- Header -->
 <header class="w3-container w3-header w3-center">
-  <h1 class="w3-margin w3-xxlarge"> <br> Laika plānošanas lietotnes</h1>
+  <h1 class="w3-margin w3-xxlarge"><br>Atsauksme!</h1>
 </header>
 
-<!-- Content Section -->
-<div class="w3-row-padding w3-container">
-  <div class="w3-content">
-    <p>Daudzi cilvēki lieto laika plānošanas lietotnes, lai efektīvāk plānotu laiku gan savām ērtībai, gan lai saskaņotu tikšanās. Tās ir ļoti dažādas, vienkāršas (piem. kalendāra aplikācija telefonos) un arī sarežģītākas (Teamdeck).</p>
-    <h3>Informācijas avoti</h3>
-    <p><a href="https://teamdeck.io/lv/produktivitate/labakas-laika-parvaldibas-programmas/">IBM Linux commercial</a></p>
+<div class="w3-container">
+        <!-- Question 1 -->
+    <form>
+        <label for="patīk" style="font-size: 1.2em;">Vai tev patīk šī mājaslapa?</label><br>
+        <br>
+        <input type="radio" id="jā" name="patīk" value="Jā">
+        <label for="jā" class="w3-text-grey">Jā</label><br>
+        <input type="radio" id="nē" name="patīk" value="Nē">
+        <label for="nē" class="w3-text-grey">Nē</label><br>
+        <input type="radio" id="nezinu" name="patīk" value="Es nezinu">
+        <label for="nezinu" class="w3-text-grey">Es nezinu</label><br><br>
+        <button type="submit">Iesniegt</button>
+    </form>
     <br>
-    <h3>Reklāma</h3>
     <br>
-    <video controls="controls" name="Video Name">
-      <source src="images/Presentation1.mov">
-      
-    </video>
     <br>
-  </div>
+    <!-- Question 2 -->
+    <form>
+        <label for="datums" style="font-size: 1.2em;">Kurā datumā jūs skatījāties šo mājaslapu?</label>
+        <input type="date" id="datums" name="datums">
+        <button type="submit">Iesniegt</button>
+    </form>
+<br>
+<br>
+    <!-- Question 3 -->
+    <form>
+        <p><label for="w3review" style="font-size: 1.2em;">Ieteikumi:</label></p>
+        <textarea id="w3review" name="w3review" rows="4" cols="50">...</textarea>
+        <br>
+        <button type="submit">Iesniegt</button>
+    </form>
 </div>
+<br>
+<br>
+<br><!-- comment -->
+<br>
 
 <!-- Footer -->
-<footer class="w3-footer">  
+<footer class="w3-footer w3-opacity">  
   <p>Mans datorikas portfolio</p>
 </footer>
+
+<script>
+function ByteConverter(valNum) {
+    // Convert GB to MB
+    document.getElementById("outputmg").innerHTML = valNum * 1000;
+
+    // Convert GB to MiB
+    document.getElementById("outputmib").innerHTML = valNum * 953.67431640625;
+}
+</script>
 
 </body>
 </html>

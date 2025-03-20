@@ -1,98 +1,159 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
-<html>
-    <head>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mans Datorikas Portfolio</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="mansStils.css">
+    <style>
+        body, h1, h2, h3, h4, h5, h6 {font-family: "Roboto", sans-serif; font-weight: bold;}
+        .w3-bar, h1 {font-family: "Roboto", sans-serif;}
+        .fa-anchor, .fa-coffee {font-size: 200px;}
+
+        /* Custom Styles */
+        .w3-bar { background-color: #add8e6; }
+        .w3-bar .w3-button { color: #333; }
+        .w3-button:hover { background-color: #a2c7d8; }
+        .w3-header { background-color: white; color: black; padding: 120px 16px; }
+        .w3-header h1 { margin: 40px 0 0 0; } /* Added margin-top to the h1 */
+        .w3-row-padding { padding: 104px 16px; }
+        .w3-container { padding: 32px; }
+        body { background-color: #f0f8ff; margin: 0; }
+        .w3-footer { background-color: #333; color: white; padding: 32px; text-align: center; width: 100%; }
+        video { width: 50%; height: auto; display: block; margin: 0 auto; }
+
+        /* Navbar Styles */
+        .w3-bar-item:hover {
+            background-color: #a2c7d8;
+        }
+        .w3-footer a {
+            color: #add8e6;
+        }
+        .w3-footer a:hover {
+            color: white;
+        }
+
+        /* Image Styling */
+        .w3-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        /* Specific fixes for Montaza and Petijums images */
+        .montaza-img {
+            max-width: 80%; /* Adjust width to prevent pushing text */
+            margin-bottom: 30px;
+        }
+
+        .petijums-img {
+            width: 100%; /* Ensure image is large enough */
+            max-width: 500px; /* Set a maximum width */
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
 
-
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-card w3-left-align w3-large">  
+      <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hover-white">Home</a>
+<div class="w3-dropdown-hover">
+  <button class="w3-bar-item w3-button w3-padding-large w3-hover-white">Attēlu apstrāde <i class="fa fa-caret-down"></i></button>
+  <div class="w3-dropdown-content w3-bar-block w3-card-4 dropdown-menu">
+    <a href="index.html#vektorgrafika" class="w3-bar-item w3-button">Vektorgrafikas</a>
+    <a href="index.html#rastrgrafika" class="w3-bar-item w3-button">Rastrgrafikas</a>
+  </div>
+</div>
+    <a href="index.html#video" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Video Montāža</a>
+    <a href="index.html#excel" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Excel</a>
+    <a href="otrais.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Individuālā Tēma</a>
+    <a href="forms.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Atsauksmes</a>
+  </div>
 </div>
 
-<div style="padding:15px 15px 2500px;font-size:30px">
-        <h1>Mans datorikas portfolio</h1>
-        <h2>Vektorgrafikas prasmes</h2>
-        <ul> 
-            <li> UMMS apgūtas prasmes vektorgradfikā ar aplikāciju <i> Adobe Illustrator</i> </li>
-            <li> Vidusskolā apgūtas prasmes GIF veidošanā un bilžu apstrādē ar aplikāciju <i>GIMP</i> un <i>Inkscape</i> </li>
-            <li> <img src="images/butterfly.PNG" style="width:300px"> </li>
-        </ul>
-         <h2>Rastrgrafikas prasmes</h2>
-        <ul> 
-            <li> UMMS apgūtas prasmes rastrgrafikā ar aplikāciju <i> Adobe Photoshop</i> </li>
-            <li> Spēju veidot plakātus, infografikus un citus vizuālus darbus 
-            <li> <img src="images/plakat.jpg" alt="Plakats" style="width:300px"> </li>
-        </ul>
-         <h2>3D modelēšana</h2>
-        <ul> 
-            <li> Skolas nolūkos veidoti 3D modeļi ar <i> Tinkercad </i></li>
-            <li> <img src="images/3d.PNG" alt="3d" style="width:300px"> </li>
-        </ul>
-          <h2>Video montāža</h2>
-        <ul> 
-            <li> Skolas nolūkos veidoti un rediģēti video ar programmām <i> CapCut </i> un <i>iMovie</i> </li>
-        </ul>
-          <h2>Excel</h2>
-        <ul> 
-            <li> Vidusskolā labi apgūta programma <i> Microsoft Excel </i>, rakstot formulas, funkcijas, veidojot diagrammas un apstrādājot datus </li>
-        </ul>
-          <h2>Word</h2>
-        <ul> 
-            <li> Vidusskolā labi apgūta programma <i> Microsoft Word </i>, rediģējot tekstu, iemācoties noderīgas prasmes, kā vēstuļu dublēšanu </li>
-        </ul>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <h2> Atsauksme! </h2><!--  -->
-   <form>
-  <label for="patīk">Vai tev patīk šī mājaslapa?</label><br>
-  <input type="radio" id="jā" name="patīk" value="Jā">
-  <label for="html">Jā</label><br>
-  <input type="radio" id="jā" name="patīk" value="Jā">
-  <label for="html">Nē</label><br>
-  <input type="radio" id="jā" name="patīk" value="Jā">
-  <label for="html">Es nezinu</label><br><br>
-    </form>
-    <form>
-  <label for="birthday">Kurā datumā Jus skatities šo mājaslapu?</label>
-  <input type="date" id="datums" name="datums">
-</form>
-    <form>
-  <p><label for="w3review">Ieteikumi:</label></p>
-  <textarea id="w3review" name="w3review" rows="4" cols="50">...</textarea>
-  <br>
-</form>
-    
-<p>
-  <label>Informācijas daudzuma mērvienības</label>
-  <input id="inputGB" type="number" placeholder="GB" oninput="ByteConverter(this.value)" onchange="ByteConverter(this.value)">
-</p>
-<p>MB: <span id="outputmg"></span></p>
-<p>MiB: <span id="outputmib"></span></p>
+<!-- Header -->
+<header class="w3-container w3-header w3-center">
+  <h1 class="w3-margin w3-xxlarge"> <br> Mans Datorikas Portfolio</h1>
+  <p class="w3-xlarge">Skatiet manas prasmes datorikā</p>
+</header>
+
+<!-- Vektorgrafikas Prasmes -->
+<div class="w3-row-padding w3-padding-64 w3-container" id="vektorgrafika">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Vektorgrafikas Prasmes</h1>
+      <h5 class="w3-padding-32">UMMS apgūtas prasmes vektorgradfikā ar aplikāciju Adobe Illustrator</h5>
+      <p class="w3-text-grey">Vidusskolā apgūtas prasmes GIF veidošanā un bilžu apstrādē ar aplikāciju GIMP un Inkscape. Ar šo programmām varu radīt un apstrādāt dažādas grafikas un animācijas.</p>
+    </div>
+    <div class="w3-third w3-center">
+      <img src="images/butterfly.PNG" alt="Butterfly Logo" class="w3-image">
+    </div>
+  </div>
+</div>
+
+<!-- Rastrgrafikas Prasmes -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="rastrgrafika">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <img src="images/plakat.jpg" alt="Plakāts" class="w3-image" style="width:300px;">
+    </div>
+    <div class="w3-twothird">
+      <h1>Rastrgrafikas Prasmes</h1>
+      <h5 class="w3-padding-32">Apgūtas prasmes rastrgrafikā ar aplikāciju Adobe Photoshop</h5>
+      <p class="w3-text-grey">Spēju veidot plakātus, infografikus un citus vizuālus darbus, izmantojot Photoshop, kā arī veikt detalizētu attēlu apstrādi un uzlabošanu.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Video Montāža -->
+<div class="w3-row-padding w3-padding-64 w3-container" id="video">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <img src="images/montaza.png" alt="Montaza" class="montaza-img">
+    </div>
+    <div class="w3-twothird">
+      <h1>Video Montāža</h1>
+      <h5 class="w3-padding-32">Skolas nolūkos veidoti un rediģēti video ar programmām CapCut un iMovie</h5>
+      <p class="w3-text-grey">Veidoju video klipus, rediģēju tos un pievienoju dažādus vizuālos un audio efektus, lai radītu profesionālus video materiālus.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Excel Prasmes -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="excel">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Excel Prasmes</h1>
+      <h5 class="w3-padding-32">Apgūtas Microsoft Excel funkcijas un formulas</h5>
+      <p class="w3-text-grey">Veidoju dažādas tabulas, diagrammas un aprēķinus, kā arī analizēju datus, izmantojot dažādus Excel rīkus un funkcijas.</p>
+    </div>
+    <div class="w3-third w3-center">
+      <img src="images/petiums.jpg" alt="Excel Skills" class="w3-image">
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-footer w3-opacity">  
+  <p>Mans datorikas portfolio</p>
+</footer>
 
 <script>
-function ByteConverter(valNum) {
-  // Convert GB to MB
-  document.getElementById("outputmg").innerHTML = valNum*1000;
-
-  // Convert GB to MiB
-  document.getElementById("outputmib").innerHTML = valNum*953.67431640625;
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
 }
 </script>
 
-<form>
-        <div>1.skaitlis<input type="text" name="sk1"> </div>
-        <div>
-            <input value="+" name="reiz" onclick="rez.value=sk1.value-sk2.value*-1" type="button">
-        </div>
-        <div>2.skaitlis<input type="text" name="sk2"> </div>
-        <hr>
-        <div>Rezultāts<input name="rez"> </div>
-    </form>
-
-        
-
-    </body>
+</body>
 </html>
