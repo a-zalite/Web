@@ -1,162 +1,289 @@
 <!DOCTYPE html>
-<html lang="lv">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mans Datorikas Portfolio</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="mansStils.css">
-    <style>
-        body, h1, h2, h3, h4, h5, h6 {font-family: "Roboto", sans-serif; font-weight: bold;}
-        .w3-bar, h1 {font-family: "Roboto", sans-serif;}
-        .fa-anchor, .fa-coffee {font-size: 200px;}
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
 
-        /* Custom Styles */
-        .w3-bar { background-color: #add8e6; }
-        .w3-bar .w3-button { color: #333; }
-        .w3-button:hover { background-color: #a2c7d8; }
-        .w3-header { background-color: white; color: black; padding: 120px 16px; }
-        .w3-header h1 { margin: 40px 0 0 0; } /* Added margin-top to the h1 */
-        .w3-row-padding { padding: 104px 16px; }
-        .w3-container { padding: 32px; }
-        body { background-color: #f0f8ff; margin: 0; }
-        .w3-footer { background-color: #333; color: white; padding: 32px; text-align: center; width: 100%; }
-        video { width: 50%; height: auto; display: block; margin: 0 auto; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-        /* Navbar Styles */
-        .w3-bar-item:hover {
-            background-color: #a2c7d8;
-        }
-        .w3-footer a {
-            color: #add8e6;
-        }
-        .w3-footer a:hover {
-            color: white;
-        }
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
 
-        /* Image Styling */
-        .w3-image {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-        }
+/* Container for flexboxes */
+section {
+  display: -webkit-flex;
+  display: flex;
+}
 
-        /* Specific fixes for Montaza and Petijums images */
-        .montaza-img {
-            max-width: 80%; /* Adjust width to prevent pushing text */
-            margin-bottom: 30px;
-        }
+/* Style the navigation menu */
+nav {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: url('images/skola.jpg') repeat-y; /* Repeat the image only vertically */
+  background-size:  100%; /* Keep the width of the image as is, scale the height to fit the navbar */
+  padding: 20px;
+  color: whitesmoke
+}
 
-        .petijums-img {
-            width: 100%; /* Ensure image is large enough */
-            max-width: 500px; /* Set a maximum width */
-            margin-bottom: 20px;
-        }
-    </style>
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  color: whitesmoke
+}
+
+/* Style the content */
+article {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+</style>
 </head>
 <body>
 
-<!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-card w3-left-align w3-large">  
-      <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hover-white">Home</a>
-<div class="w3-dropdown-hover">
-  <button class="w3-bar-item w3-button w3-padding-large w3-hover-white">Attēlu apstrāde <i class="fa fa-caret-down"></i></button>
-  <div class="w3-dropdown-content w3-bar-block w3-card-4 dropdown-menu">
-    <a href="index.html#vektorgrafika" class="w3-bar-item w3-button">Vektorgrafikas</a>
-    <a href="index.html#rastrgrafika" class="w3-bar-item w3-button">Rastrgrafikas</a>
-  </div>
-</div>
-    <a href="index.html#video" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Video Montāža</a>
-    <a href="index.html#excel" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Excel</a>
-    <a href="otrais.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Individuālā Tēma</a>
-    <a href="forms.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Atsauksmes</a>
-  </div>
-</div>
-
-<!-- Header -->
-<header class="w3-container w3-header w3-center">
-  <h1 class="w3-margin w3-xxlarge"> <br> Mans Datorikas Portfolio</h1>
-  <p class="w3-xlarge">Skatiet manas prasmes datorikā</p>
+<header>
+  <h2>Rīgas Valsts 1. ģimnāzija</h2>
 </header>
 
-<!-- Vektorgrafikas Prasmes -->
-<div class="w3-row-padding w3-padding-64 w3-container" id="vektorgrafika">
-  <div class="w3-content">
-    <div class="w3-twothird">
-      <h1>Vektorgrafikas Prasmes</h1>
-      <h5 class="w3-padding-32">UMMS apgūtas prasmes vektorgradfikā ar aplikāciju Adobe Illustrator</h5>
-      <p class="w3-text-grey">Vidusskolā apgūtas prasmes GIF veidošanā un bilžu apstrādē ar aplikāciju GIMP un Inkscape. Ar šo programmām varu radīt un apstrādāt dažādas grafikas un animācijas.</p>
-    </div>
-    <div class="w3-third w3-center">
-      <img src="images/butterfly.PNG" alt="Butterfly Logo" class="w3-image">
-    </div>
-  </div>
-</div>
+<section>
+  <nav>
+    <ol>
+       <b>Satura rādītājs</b>
+      <li><a color: whitesmoke href="skola.html#vesture" >Vēsture</a></li>
+      <li><a color: whitesmoke href="skola.html#nosaukumi">Skolas nosaukumu maiņas</a></li>
+      <li><a color: whitesmoke href="skola.html#vaditaji">Zināmie skolas vadītāji (1229—1804)</a></li>
+      <li><a color: whitesmoke href="skola.html#absolventi">Skolas absolventi</a></li>
+    </ol>
+  </nav>
+  
+  <article>
+      
+ <h2> Par skolu </h2>
+      <p>
+          <b>Rīgas Valsts 1. ģimnāzija</b> (saīsinājumā RV1Ģ vai RV1.ģ) ir vispārējās pamata un vidējās izglītības iestāde Rīgā. 
+      Tā ir pilsētas senākā skola. Ģimnāzija specializējas matemātikas un valodu padziļinātā apgūšanā. 
+      Mācības šajā skolā notiek latviešu valodā. Kopš 1996. gada ģimnāzija piedalās Starptautiskā bakalaurāta mācību programmas realizācijas projektā. 
+      Skolai kā pirmajai Latvijā dibināta absolventu un draugu biedrība ar mērķi finansiāli atbalstīt skolu. Skolā darbojas jauniešu koris "Kamēr...". 
+      Kopš 2009. gada Draudzīgā aicinājuma fonda skolu reitingā un kopš 2013. gada Ata Kronvalda fonda Latvijas skolu reitingā Rīgas Valsts 1. ģimnāzija ieņem pirmo vietu ģimnāziju un lielo skolu grupā. 
+      Lai iegūtu vietu skolā, ir jāiztur matemātikas konkurss, kurā uz vienu vietu pretendē 8-10 skolēni. 
+      9. klases noslēgumā skolēniem jāiztur vēl viens matemātikas konkurss, lai saglabātu vietu skolā. 
+      2019. gadā konkursam uz 10. klasi pieteicās vairāk nekā tūkstoš Latvijas 9. klašu skolēnu.
+      </p>
+      
+     </div>
 
-<!-- Rastrgrafikas Prasmes -->
-<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="rastrgrafika">
-  <div class="w3-content">
-    <div class="w3-third w3-center">
-      <img src="images/plakat.jpg" alt="Plakāts" class="w3-image" style="width:300px;">
-    </div>
-    <div class="w3-twothird">
-      <h1>Rastrgrafikas Prasmes</h1>
-      <h5 class="w3-padding-32">Apgūtas prasmes rastrgrafikā ar aplikāciju Adobe Photoshop</h5>
-      <p class="w3-text-grey">Spēju veidot plakātus, infografikus un citus vizuālus darbus, izmantojot Photoshop, kā arī veikt detalizētu attēlu apstrādi un uzlabošanu.</p>
-    </div>
-  </div>
+ <div id="vesture"> 
+      
+<h2> Vēsture </h2>
+      Skolas pastāvēšanai iespējams izsekot līdz pat 1211. gadam, kad bīskaps Alberts Rīgā nodibināja Svētās Marijas katedrāli un pie tās — Livonijas bīskapijas domkapitula 
+klosteri. Kādā 1239. gada 19. aprīļa dokumentā minēts, ka domkapitula sholastiķis (mācību pārzinis) bijis kanoniķis Heinrihs, kas uzskatāms par pirmo zināmo 
+Rīgas Doma klostera skolas vadītāju. Skola atradās Doma baznīcas krustejā un bija paredzēta katoļu garīdznieku sagatavošanai. Tās mācību programma atbilstoši 
+viduslaiku latīņu skolu tradīcijai bija sadalīta triviuma ciklā — gramatika, retorika un dialektika. 
+<hr> 
+1524. gadā luterāņu sarīkotajos baznīcu grautiņos katoļu 
+Doma klostera skolu slēdza. 1528. gadā Rīgas rāte skolu no jauna atvēra kā laicīgu pilsētas otrās pakāpes skolu un par Domskolas pirmo rektoru iecēla Nīderlandes 
+kalvinistu sludinātāju Jākobu Batusu (Jacobus Battus, miris 1546. gadā). Pēc viņa Domskolas rektori bija Retgers Pistorijs (no 1538) un 
+Hermanis Vilkens (1554—1561), vēlākais Heidelbergas Universitātes rektors, kas savās publikācijās par burvestībām pieminējis Rīgas apkārtnes vilkačus. 
+Skolā bija trīs klases, kurās mācīja klasiskās valodas, gatavojot tālākām studijām universitātēs. 
+<hr>
+Zviedru Vidzemes laikā ar Zviedrijas karaļa Gustava II Ādolfa lēmumu 1631. gadā uz Doma skolas bāzes izveidoja Rīgas Akadēmisko ģimnāziju. Tajā bija trīs augstākās klases, kurās uzņēma pēc piecu klašu Domskolas beigšanas.
+Pirmie ģimnāzijas profesori bija Hermanis Samsons (ģimnāzijas inspektors), Johans Struborgs un Johans Hēfelns, vēlākie profesori bija Johans Brēvers 
+(filozofija, vēsture, teoloģija), Johans Rihmanis (filozofija), Henings Vite (retorika un vēsture), Johans Pauls Mellers (jurisprudence un matemātika), 
+kas ģimnāzijā izveidoja observatoriju ar diviem teleskopiem. Ģimnāzijā tika rīkoti publiski disputi un priekšlasījumi, kas saglabājušies līdz mūsu dienām. 
+<hr>
+1656. gadā ģimnāzijas ēka Otrā Ziemeļu kara laikā krievu bombardēšanas dēļ tika nopostīta, un 1675. gadā Zviedrijas karalis Kārlis XI nodibināja otru pilsētas 
+ģimnāziju — Kārļa liceju (latīniski: Schola Carolina), kas atradās pie Sv. Jēkaba baznīcas. Rīgas Akadēmiskā ģimnāzija pie Rīgas Doma darbu atsāka 1678. gadā. 
+Pēc Rīgas ieņemšanas Lielā Ziemeļu kara laikā 1711. gadā ģimnāzijas klases tika slēgtas, tomēr turpināja darboties Rīgas Domskola, kurā pakāpeniski 
+atjaunojās klasiskās ģimnāzijas tradīcijas. 
+<hr>
+Šajā periodā skolā strādāja vēlākais filozofs Johans Gotfrīds Herders (1764—1769) un rektora amatā bija 
+ievērojamie apgaismības laikmeta darbinieki Karls Filips Mihaels Snells (1780—1787) un Kārlis Gotlobs Zontāgs (no 1788). 
+1787. gada 12. jūlijā pēc Krievijas ķeizarienes Katrīnas II rīkojuma tika svinīgi atklāta jaunā ģimnāzijas — Rīgas liceja — ēka Pils laukumā 2 
+(ēka celta 1785.—1787. gadā, arhitekts Matiass Šonss). 1804. gadā Vidzemes guberņas izglītības reformu laikā Domskolu pārveidoja par Rīgas apriņķa galveno 
+mācību iestādi — Rīgas 1. apriņķa skolu, 1861. gadā — par Rīgas reālģimnāziju, kurā mācījās arī Vilhelms Ostvalds (1864—1871), bet 1873. gadā — par 
+Rīgas Pilsētas ģimnāziju. 
+<hr>
+Publiskai apskatei Rīgas pilsētas reālģimnāzijā 1869. gadā atklāja Rīgas pilsētas gleznu galeriju. 1874. gadā pēc Rīgas galvenā 
+arhitekta Johana Daniela Felsko projekta tika uzcelta tagadējā skolas ēka Raiņa bulvārī 8. Rīgas pilsētas gleznu galerija 1879. gadā tika pārcelta uz netālo 
+Kerkoviusa namu (tagad Kalpaka bulvārī 4). Vecā skolas ēka pie Doma baznicas tika nojaukta 1888. gadā, būvējot pilsētas muzeju. 
+Šajā laikā skolā mācījušies Jānis Pliekšāns, Pēteris Stučka un citi vēlākie latviešu sabiedriskie darbinieki. 
+<hr>
+Rusifikācijas periodā 1894. gadā skolu pārveidoja par klasisko ģimnāziju, vēlāk — par valsts ģimnāziju (Государственная гимназия) ar krievu mācību valodu. 
+1919. gadā Stučkas valdība pārdēvēja to par Rīgas 1. vidusskolu ar latviešu mācību valodu, Latvijas Republikas laikā tika atjaunota Rīgas pilsētas 1. ģimnāzija, 
+kuras direktors ilgu laiku bija Jānis Stiprais (1922–1935), tad Jānis Lapiņš (1935—1939). Pēc Latvijas okupācijas skolu atkal pārdēvēja par Rīgas 1. 
+vidusskolu un 1944. gadā nosauca tās pirmā direktora Leona Paegles vārdā. 
+<hr>
+Pēc Latvijas Republikas atjaunošanas skola atguva Rīgas 1. ģimnāzijas vārdu, 
+bet kopš 1996. gada tiek dēvēta par Rīgas Valsts 1. ģimnāziju. Meklējot datus par skolas vēsturi, jāņem vērā, ka laika posmā, kad skolu sauca par 
+Rīgas pilsētas 1. ģimnāziju, pastāvēja arī Rīgas Valsts 1. ģimnāzija, kas nav saistīta ar šajā rakstā minēto skolu.
 </div>
+       <div id="nosaukumi"> 
+<h2>Skolas nosaukumu maiņas</h2>
 
-<!-- Video Montāža -->
-<div class="w3-row-padding w3-padding-64 w3-container" id="video">
-  <div class="w3-content">
-    <div class="w3-third w3-center">
-      <img src="images/montaza.png" alt="Montaza" class="montaza-img">
-    </div>
-    <div class="w3-twothird">
-      <h1>Video Montāža</h1>
-      <h5 class="w3-padding-32">Skolas nolūkos veidoti un rediģēti video ar programmām CapCut un iMovie</h5>
-      <p class="w3-text-grey">Veidoju video klipus, rediģēju tos un pievienoju dažādus vizuālos un audio efektus, lai radītu profesionālus video materiālus.</p>
-    </div>
-  </div>
-</div>
+<p> Pēc Latvijas Valsts arhīva datiem, Rīgas Valsts 1. ģimnāzija piedzīvojusi vismaz 15 dažādus nosaukumus:
+<ul>
+    <li>1211.—1528. — Domkapitula klostera skola</li>
 
-<!-- Excel Prasmes -->
-<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="excel">
-  <div class="w3-content">
-    <div class="w3-twothird">
-      <h1>Excel Prasmes</h1>
-      <h5 class="w3-padding-32">Apgūtas Microsoft Excel funkcijas un formulas</h5>
-      <p class="w3-text-grey">Veidoju dažādas tabulas, diagrammas un aprēķinus, kā arī analizēju datus, izmantojot dažādus Excel rīkus un funkcijas.</p>
-    </div>
-    <div class="w3-third w3-center">
-      <img src="images/petiums.JPG" alt="Excel Skills" class="w3-image">
-    </div>
-  </div>
-</div>
+    <li>1528.—1631. — Rīgas pilsētas Domskola</li>
 
-<!-- Footer -->
-<footer class="w3-footer w3-opacity">  
-  <p>Mans datorikas portfolio
-      <br><!-- comment -->
-      <a href="skola.html"> Kontroldarba 1. daļa - skola.html </a>
+    <li>1631.—1710. — Rīgas Akadēmiskā ģimnāzija</li>
+
+    <li>1711.—1804. — Rīgas Domskola (klasiskā ģimnāzija)</li>
+
+    <li>1804.—1860. — Rīgas 1. apriņķa skola</li>
+
+    <li>1861.—1873. — Rīgas Reālģimnāzija</li>
+
+    <li>1873.—1894. — Rīgas Pilsētas ģimnāzija ar reālskolas un ģimnāzijas klasēm</li>
+
+    <li>1894.—1895. — 8 klašu klasiskā ģimnāzija</li>
+
+    <li>1896.—1919. — Valsts ģimnāzija</li>
+
+    <li>1919.—1920. — 1. vidusskola</li>
+
+    <li>1920.—1940. — Rīgas pilsētas 1. ģimnāzija</li>
+
+    <li>1940.—1944. — Rīgas 1. vidusskola</li>
+
+    <li>1944.—1990. — Ar Darba Sarkanā Karoga ordeni apbalvotā Rīgas L. Paegles 1. vidusskola</li>
+
+    <li>1990.—1996. — Rīgas 1. ģimnāzija</li>
+
+    <li>1996.—pašlaik — Rīgas Valsts 1. ģimnāzija</li>
+</ul>
   </p>
-</footer>
+       </div>
+ <div id="vaditaji"> 
+ <h2>Zināmie skolas vadītāji (1229—1804)</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Laika posms</th>
+          <th>Skolas vadītājs</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ap 1239.</td>
+          <td>mācību pārzinis Heinrihs</td>
+        </tr>
+        <tr>
+          <td>1528.—1538.</td>
+          <td>rektors Jakobs Batuss</td>
+        </tr>
+        <tr>
+          <td>no 1538.</td>
+          <td>rektors Retgers Pistorijs</td>
+        </tr>
+        <tr>
+          <td>1554.—1561.</td>
+          <td>rektors Hermanis Vilkens</td>
+        </tr>
+        <tr>
+          <td>ap 1576.</td>
+          <td>rektors Georgs Marsovs</td>
+        </tr>
+        <tr>
+          <td>1579.—1589.</td>
+          <td>rektors Heinrihs Mellers</td>
+        </tr>
+        <tr>
+          <td>1589.—1596.</td>
+          <td>rektors un inspektors Johans Rīvijs</td>
+        </tr>
+        <tr>
+          <td>no 1631.</td>
+          <td>ģimnāzijas inspektors Hermanis Samsons</td>
+        </tr>
+        <tr>
+            <td>no 1669.</td>
+          <td>rektors Georgs Lauterbahs</td>
+        </tr>
+        <tr>
+          <td>no 1681.</td>
+          <td>rektors Mihaels Pinsderfers</td>
+        </tr>
+        <tr>
+          <td>1755.—1765.</td>
+          <td>rektors Johans Gothelfs Lindners</td>
+        </tr>
+        <tr>
+          <td>1765.—1780.</td>
+          <td>rektors Gotlībs Šlēgels</td>
+        </tr>
+        <tr>
+          <td>1780.—1787.</td>
+          <td>rektors Karls Filips Mihaels Snells</td>
+        </tr>
+        <tr>
+          <td>no 1788.</td>
+          <td>rektors Kārlis Gotlobs Zontāgs</td>
+        </tr>
+        <tr>
+          <td>līdz 1804.</td>
+          <td>rektors Johans Augusts Albanuss</td>
+        </tr>
+      </tbody>
+    </table>
+ </div>
+      <div id="absolventi">
+     
+     <h2 > Skolas absolventi </h2>
+     <p> <a href="https://runa.lnb.lv/110023/"><strong>Rainis</strong> </a> <br>
+  <small>(Jānis Pliekšāns, 1865-1929)</small>
+  <br>
+         <br>
+        Izcils latviešu dzejnieks, dramaturgs, žurnālists un kultūras darbinieks, filozofs un politiķis. Tā ir personība ar milzīgu garīgās enerģijas un radošās darbības amplitūdu. Latvijas vēsturē viņam ir paliekoša nozīme kā vienam no redzamākajiem savas tautas kultūras un nacionālās identitātes veidotājiem Latvijas neatkarības izcīņas laikmetā.
+        <br>
+Jānis Pliekšāns ir dzimis 1865. gada 11. septembrī Sēlijā, Dunavas pagasta Tadenavas pusmuižas Varslavānu mājās. Viņa tēvs nomā un apsaimnieko pusmuižas, tādēļ ģimene bieži maina dzīvesvietas, un nākamā dzejnieka bērnība un pusaudža gadi paiet Tadenavas, Randenes un Berķeneles pusmuižās Sēlijā un Vasiļovā, kā arī Jasmuižā Latgalē. Viņš mācās Grīvas vācu skolā (1875-1879) un Rīgas pilsētas ģimnāzijā (1880-1884).
+     
+     
+     
+     </p>
+    
+</div>
+    
+   
+  </article>
+</section>
 
-<script>
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-</script>
+<footer>
+    <p><a href="https://www.r1g.edu.lv/"><img src="images/logo.png" alt="logo"<a></p>
+</footer>
 
 </body>
 </html>
