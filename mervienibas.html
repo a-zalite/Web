@@ -5,88 +5,50 @@
     <title>Informācijas daudzuma mērvienības</title>
   <style>
   	body {
-
-      
+            background: url('images/cipari.jpg');
+            font-size: 20px;
+            color: black;
     }
+    form {
+            background-color:rgb(220, 220, 0);
+            margin: auto;
+        }
     
   </style>
  
 </head>
 <body>
-    <h1>Informācijas daudzuma mērvienības</h1>
+    <h1><b>Informācijas daudzuma mērvienības</b></h1>
     <hr>
     <form>
-        <label> <input type="text" id="gads" placeholder="ievadi gadu"> GB= </label><br>
-        <label>Mēnesis: <input type="text" id="menesis" placeholder="ievadi mēnesi"></label><br>
-        <label>Diena: <input type="text" id="diena" placeholder="ievadi datumu"></label><br>
-        <button type="button" onclick="dienas()">Aprēķināt dienu skaitu līdz dzimšanas dienai</button>
+        <label> <input type="text" id="gb"  </label> GB=<br> <br>
+        <button type="button" onclick="izteiktmb()">Izteikt megabaitos</button> <input type="text" id="mb" readonly> MB
+        <br><br>
+        <button type="button" onclick="izteiktmib()">Izteikt   mibibaitos</button> <input type="text" id="mib" readonly> MiB 
     </form>
-    <p id="rezultats">Līdz svētkiem atlikušas: </p>   
+            
+     
     
      
 </div>
 
-<script>
-function ByteConverter(valNum) {
-    // Convert GB to MB
-    document.getElementById("outputmg").innerHTML = valNum * 1000;
 
-    // Convert GB to MiB
-    document.getElementById("outputmib").innerHTML = valNum * 953.67431640625;
-}
-</script>
+  <script>
+        function izteiktmb() {
+            let gb = parseFloat(document.getElementById("gb").value);
+            let mb = gb * 1024;
 
+            document.getElementById("mb").value = mb;
+        }
+    </script>
+  <script>
+        function izteiktmib() {
+            let gb = parseFloat(document.getElementById("gb").value);
+            let mib = gb * 953.67431640625;
+
+            document.getElementById("mib").value = mib;
+        }
+    </script>
   
 </body>
 </html> 
-
-<!DOCTYPE html>
-<html lang="lv">
-<head>
-    <meta charset="UTF-8">
-    <title>Informācijas daudzuma mērvienības</title>
-    <style>
-        body {
-            background-color: lightyellow;
-            font-size: 20px;
-            color: darkgreen;
-        }
-        form {
-            background-color: gold;
-            padding: 20px;
-            width: 220px;
-            margin: auto;
-            border: 2px solid green;
-        }
-        input[type="text"] {
-            width: 100%;
-            margin: 5px 0;
-        }
-        button {
-            width: 100%;
-            margin-top: 10px;
-            background-color: darkgreen;
-            color: white;
-        }
-    </style>
-    <script>
-        function izteikt() {
-            let gb = parseFloat(document.getElementById("gb").value);
-            let mb = gb * 1024;
-            let mib = gb * 1024 * 1024;
-
-            document.getElementById("mb").value = mb + " MB";
-            document.getElementById("mib").value = mib + " MiB";
-        }
-    </script>
-</head>
-<body>
-    <h1>Informācijas daudzuma mērvienības</h1>
-    <form>
-        <label>GB: <input type="text" id="gb" placeholder="Ievadi gigabaitus"></label><br>
-        <label>Izteikt megabaitos: <input type="text" id="mb" readonly></label><br>
-        <label>Izteikt mebibaitos: <input type="text" id="mib" readonly></label><br>
-        <button type="button" onclick="izteikt()">Aprēķināt</button>
-    </form>
-</body>
-</html>
