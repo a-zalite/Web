@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <title>Informācijas daudzuma mērvienības</title>
+  <style>
+  	body {
+
+      
+    }
+    
+  </style>
+ 
+</head>
+<body>
+    <h1>Informācijas daudzuma mērvienības</h1>
+    <hr>
+    <form>
+        <label> <input type="text" id="gads" placeholder="ievadi gadu"> GB= </label><br>
+        <label>Mēnesis: <input type="text" id="menesis" placeholder="ievadi mēnesi"></label><br>
+        <label>Diena: <input type="text" id="diena" placeholder="ievadi datumu"></label><br>
+        <button type="button" onclick="dienas()">Aprēķināt dienu skaitu līdz dzimšanas dienai</button>
+    </form>
+    <p id="rezultats">Līdz svētkiem atlikušas: </p>   
+    
+     
+</div>
+
+<script>
+function ByteConverter(valNum) {
+    // Convert GB to MB
+    document.getElementById("outputmg").innerHTML = valNum * 1000;
+
+    // Convert GB to MiB
+    document.getElementById("outputmib").innerHTML = valNum * 953.67431640625;
+}
+</script>
+
+  
+</body>
+</html> 
