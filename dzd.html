@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <title>Gaidot dzimšanas dienu</title>
+    <script>
+        function dienas() {
+            let today = new Date();
+            let year = parseInt(document.getElementById("gads").value);
+            let month = parseInt(document.getElementById("menesis").value) - 1;
+            let day = parseInt(document.getElementById("diena").value);
 
+            let birthday = new Date(year, month, day);
+            let diff = birthday - today;
+
+            if (diff < 0) {
+                birthday.setFullYear(birthday.getFullYear() + 1);
+                diff = birthday - today;
+            }
+
+            let daysLeft = Math.ceil(diff / (1000 * 60 * 60 * 24));
+            document.getElementById("rezultats").innerText = "Līdz dzimšanas dienai atlikušas " + daysLeft + " dienas!";
+        }
+    </script>
+</head>
+<body>
+    <h1>Gaidot dzimšanas dienu..</h1>
+    <hr>
+    <form>
+        <label>Gads: <input type="text" id="gads" placeholder="ievadi gadu"></label><br>
+        <label>Mēnesis: <input type="text" id="menesis" placeholder="ievadi mēnesi"></label><br>
+        <label>Diena: <input type="text" id="diena" placeholder="ievadi dienu"></label><br>
+        <button type="button" onclick="dienas()">Aprēķināt dienu skaitu līdz dzimšanas dienai</button>
+    </form>
+    <p id="rezultats">Līdz svētkiem atlikušas: </p>
+</body>
+</html>
